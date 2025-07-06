@@ -17,7 +17,7 @@ export const Testimonials = ()=>{
                         <div className='slide'>
                             <div className='user-info'>
                                 <img src={user_1} alt=''/>
-                                <div>
+                                <div className='desc'>
                                     <h3>William Jackson</h3>
                                     <span>Educity, USA</span>
                                 </div>
