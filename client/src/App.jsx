@@ -6,6 +6,7 @@ import { Programs } from './components/Programs/Programs.jsx'
 import { Title } from './components/Title/Title.jsx'
 import { About } from './components/About/About.jsx'
 import { Campus } from './components/Campus/Campus.jsx'
+import { Testimonials } from './components/Testimonials/Testimonials.jsx'
 const App = ()=>{
   return(
     <>
@@ -17,6 +18,7 @@ const App = ()=>{
     <Title sub_heading='Gallery' heading='Campus Photos'/>
     <Campus />
     <Title sub_heading='testimonials' heading='What student says'/>
+    <Testimonials />
     </>
   )
 }
