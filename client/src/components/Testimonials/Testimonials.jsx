@@ -8,19 +8,19 @@ import user_3 from '../../assets/user-3.png'
 import user_4 from '../../assets/user-4.png'
 export const Testimonials = ()=>{
     const slider = useRef();
-    let translateX = 0;
+    let translateX = useRef(0);
     const slideForward = ()=>{
-        if(translateX < 0){
-        translateX = translateX + 25;
-        slider.current.style.transform = `translateX(${translateX}%)`;
+        if(translateX.current < 0){
+        translateX.current += 25;
+        slider.current.style.transform = `translateX(${translateX.current}%)`;
         }
     }
 
     const slideBackward = ()=>{
         
-        if(translateX > -50){
-        translateX = translateX - 25;
-        slider.current.style.transform = `translateX(${translateX}%)`;
+        if(translateX.current > -50){
+        translateX.current -= 25;
+        slider.current.style.transform = `translateX(${translateX.current}%)`;
         }
     }
     return (
