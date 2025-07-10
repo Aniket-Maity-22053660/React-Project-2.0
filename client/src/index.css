@@ -20,6 +20,7 @@ a{
 }
 .container{
   padding:0px 10%;
+ /* border:1px solid black; */
 }
 .btn{
   background:#fff;
@@ -37,4 +38,13 @@ a{
 .btn img{
   width:20px;
   margin-left:10px;
+}
+@media(max-width: 1200px){
+  .container{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .btn{
+    padding: 14px 22px;
+  }
 }

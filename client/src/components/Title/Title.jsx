@@ -5,7 +5,7 @@ export const Title = (props)=>{
         <div className='title container'>
             <p>{props.sub_heading}</p>
             <h2>{props.heading}</h2>
-            <h1>AJANTA</h1>
+            <h1></h1>
         </div>
     )
 }
