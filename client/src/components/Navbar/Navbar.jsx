@@ -2,12 +2,16 @@ import React, { useEffect, useState } from 'react'
 import './Navbar.css'
 import logo from '../../assets/logo.png'
 import { Link } from 'react-scroll'
-
+import menu_icon from '../../assets/menu-icon.png'
 export const Navbar = ()=>{
     const [sticky, setSticky] = useState(false);
+    const [menuColor, setMenuColor] = useState(false);
     useEffect(()=>{
         window.addEventListener('scroll',()=>{
             window.scrollY > 50 ? setSticky(true): setSticky(false)
+        });
+        window.addEventListener('scroll', ()=>{
+            window.scrollY > 1000 ? setMenuColor(true) : setMenuColor(false);
         })
     }, []);
     const [mobileMenu, setMobileMenu] = useState(false);
@@ -19,7 +23,7 @@ export const Navbar = ()=>{
     }
     return(
         <>
-        <nav className={`hide-nav`} onClick={(e)=>handleMenu(e)}>menu</nav>
+        <nav className={`hide-nav`} onClick={(e)=>handleMenu(e)}><img src={menu_icon} alt='' className='menu-img'/></nav>
         <nav className={`container ${sticky ? 'dark-nav' : ''} ${mobileMenu?'hide':''}`}>
             <img src={logo} alt="" className="logo"/>
             <ul>
